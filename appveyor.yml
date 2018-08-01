@@ -12,7 +12,8 @@ install:
 build_script:
   - npm run build
   
-artifact: /.*\.nupkg/
+artifacts:
+  - path: /.*\.nupkg/
   
 on_success:
   - git config --global credential.helper store
