@@ -11,10 +11,7 @@ install:
 
 build_script:
   - npm run build
-
-artifacts:
-  - path: dist
-
+  
 on_success:
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
